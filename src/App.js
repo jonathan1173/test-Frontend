@@ -1,21 +1,20 @@
-
-
-import Welcome from './components/Welcome';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel'
-import Gallery from './components/Gallery'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { PageIndex } from './Page/Index'
+import { PageLogin } from './Page/login'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-function App(){
+function App() {
   return (
-    <div>
-      <Navbar/>
-      <Carousel/>
-      <Welcome/>
-      <Gallery/>
-      <Footer/>
-    </div>
-
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={< Navigate to="/index" />} />
+        <Route path='/index' element={<PageIndex />} />
+        <Route path='/login' element={<PageLogin />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

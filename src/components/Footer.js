@@ -19,7 +19,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-300 border-t border-t-black text-gray-800 py-2 px-4 text-center">
+    <footer className="bg-white border-t  text-gray-800 py-2 px-4 text-center">
       <div className="max-w-6xl mx-auto flex flex-col items-center space-y-6">
         <div className="flex space-x-4">
           {socialIcons.map((social) => (
