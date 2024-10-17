@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X, LogIn } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import LogoBeta from '../assets/logoBeta.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,17 +15,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* Logo */}
-            <button className="flex-shrink-0 flex flex-row items-center gap-2 ">
-              <img className="h-12 w-12 bg-black rounded-full" src="https://img.icons8.com/?size=512&id=17949&format=png " alt="Logo" />
-              <h1 className='text-3xl font-bold ' >BETA</h1>
+            <button className="flex-shrink-0  flex flex-row items-center gap-2 ">
+              <img className="h-24 w-24 " src={LogoBeta} alt="Logo" />
             </button>
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/index"> <button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</button> </Link>
-                <button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">About</button>
-                <button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Services</button>
-                <button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contact</button>
+                <Link to="/home"> <button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</button> </Link>
+                <Link to="/community"><button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Community</button> </Link>
+                <Link to="/doc"><button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Doc</button> </Link>
+                <Link to="/store"><button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Store</button> </Link>
+                <Link to="/contact"><button className="text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contact</button> </Link>
               </div>
             </div>
           </div>
@@ -64,10 +65,11 @@ export default function Navbar() {
             className="md:hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/index"> <button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Home</button> </Link>
-              <button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">About</button>
-              <button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Services</button>
-              <button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Contact</button>
+              <Link to="/home"><button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Home</button> </Link>
+              <Link to="/community"><button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Community</button> </Link>
+              <Link to="/doc"><button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Doc</button> </Link>
+              <Link to="/store"><button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Store</button> </Link>
+              <Link to="/contact"><button className="text-gray-800 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium">Contact</button> </Link>
             </div>
 
             <div className="pt-4 pb-3 border-t border-gray-200">
